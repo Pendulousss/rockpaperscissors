@@ -1,5 +1,5 @@
-let userscore = 0;
-            let compscore = 0;
+            let userscore = 0;
+            let computerputerscore = 0;
             
             function getusermove(usermove){
                 usermove = (prompt("Rock Paper Scissors go: ")).toString().toLowerCase();
@@ -7,7 +7,7 @@ let userscore = 0;
                 return usermove;
             }
 
-            function getcompmove(compmove){
+            function getcomputermove(computermove){
                 let rannum = Math.random();
                 if (rannum <= 0.33){
                     return "rock";
@@ -23,35 +23,35 @@ let userscore = 0;
                 for (i=0;i<5;i++){
                  let usermove = getusermove();
                  console.log(`you: `+ usermove);
-                 let compmove = getcompmove();
-                 console.log(`com: `+ compmove)
+                 let computermove = getcomputermove();
+                 console.log(`computer: `+ computermove)
 
                  
 
-                    if (usermove === "rock" && compmove === "scissors"){
+                    if (usermove === "rock" && computermove === "scissors"){
                         console.log("You win");
                         userscore++;
-                    } else if (usermove === "paper" && compmove === "rock"){
+                    } else if (usermove === "paper" && computermove === "rock"){
                         console.log("You win");
                         userscore++;
-                    } else if (usermove === "scissors" && compmove ==="paper"){
+                    } else if (usermove === "scissors" && computermove ==="paper"){
                         console.log("You win");
                         userscore++;
-                    } else if (compmove === "rock" && usermove === "scissors"){
+                    } else if (computermove === "rock" && usermove === "scissors"){
                         console.log("you lost");
-                        compscore++;
-                    } else if (compmove === "paper" && usermove === "rock"){
+                        computerputerscore++;
+                    } else if (computermove === "paper" && usermove === "rock"){
                         console.log("you lost");
-                        compscore++
-                    }else if (compmove === "scissors" && usermove === "paper"){
+                        computerputerscore++
+                    }else if (computermove === "scissors" && usermove === "paper"){
                         console.log("you lost");
-                    }else if (usermove === compmove){console.log("it's a tie."); userscore++; compscore++;}
+                    }else if (usermove === computermove){console.log("it's a tie."); userscore++; computeruterscore++;}
                 }
 
-                if (userscore>compscore){console.log("YAY! You won the Game.")}
-                else if (compscore>userscore){console.log("You lost. Better luck next time.")}
-                else if (compscore===userscore){console.log("The Game is a tie.Shall we play again?")}
+                if (userscore>computerscore){console.log("YAY! You won the Game.")}
+                else if (computerscore>userscore){console.log("You lost. Better luck next time.")}
+                else if (computerscore===userscore){console.log("The Game is a tie.Shall we play again?")}
 
                 console.log("Your Score: "+ userscore);
-                console.log("Comp Score: "+ compscore);
+                console.log("computer Score: "+ computerscore);
             }    
