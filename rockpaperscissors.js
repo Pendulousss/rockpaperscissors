@@ -1,57 +1,50 @@
             let userscore = 0;
-            let computerputerscore = 0;
+            let computerscore = 0;
             
             function getusermove(usermove){
-                usermove = (prompt("Rock Paper Scissors go: ")).toString().toLowerCase();
-                if (usermove !== "rock" && usermove !== "paper" && usermove !== "scissors"){alert("Invalid input");usermove = (prompt("Rock Paper Scissors go: ")).toString().toLowerCase(); }
+                usermove = (prompt(`Rock Paper Scissors go: `)).toString().toLowerCase();
+                if (usermove !== `rock` && usermove !== `paper` && usermove !== `scissors`){alert(`Invalid input`);usermove = (prompt(`Rock Paper Scissors go: `)).toString().toLowerCase(); }
                 return usermove;
             }
 
             function getcomputermove(computermove){
                 let rannum = Math.random();
                 if (rannum <= 0.33){
-                    return "rock";
+                    return `rock`;
                 } else if (rannum > 0.33 && rannum < 0.66){
-                    return "paper";
+                    return `paper`;
                 } else if (rannum >0.66){
-                    return "scissors"
+                    return `scissors`
                 }
             }
 
             function playgame(){
 
-                for (i=0;i<5;i++){
+                for (i=1;i<6;i++){
                  let usermove = getusermove();
-                 console.log(`you: `+ usermove);
                  let computermove = getcomputermove();
-                 console.log(`computer: `+ computermove)
-
                  
-
-                    if (usermove === "rock" && computermove === "scissors"){
-                        console.log("You win");
+                    if (usermove === `rock` && computermove === `scissors`){
+                        alert(`you: ${usermove} \ncomputer: ${computermove} \nYou win. Rock beats Scissors`);
                         userscore++;
-                    } else if (usermove === "paper" && computermove === "rock"){
-                        console.log("You win");
+                    } else if (usermove === `paper` && computermove === `rock`){
+                        alert(`you: ${usermov} \ncomputer: ${computermove} \nYou win. Paper wraps Rock`);
                         userscore++;
-                    } else if (usermove === "scissors" && computermove ==="paper"){
-                        console.log("You win");
+                    } else if (usermove === `scissors` && computermove ===`paper`){
+                        alert(`you: ${usermove} \ncomputer: ${computermove} \nYou win. Scissors cut Paper`);
                         userscore++;
-                    } else if (computermove === "rock" && usermove === "scissors"){
-                        console.log("you lost");
-                        computerputerscore++;
-                    } else if (computermove === "paper" && usermove === "rock"){
-                        console.log("you lost");
-                        computerputerscore++
-                    }else if (computermove === "scissors" && usermove === "paper"){
-                        console.log("you lost");
-                    }else if (usermove === computermove){console.log("it's a tie."); userscore++; computeruterscore++;}
+                    } else if (computermove === `rock` && usermove === `scissors`){
+                        alert(`you: ${usermove} \ncomputer: ${computermove} \nyou lost. Rock beats Scissors`);
+                        computerscore++;
+                    } else if (computermove === `paper` && usermove === `rock`){
+                        alert(`you: ${usermove} \ncomputer: ${computermove} \nyou lost. Paper wraps Rock`);
+                        computerscore++
+                    }else if (computermove === `scissors` && usermove === `paper`){
+                        alert(`you: ${usermove} \ncomputer: ${computermove} \nyou lost. Scissors cut Paper`);
+                    }else if (usermove === computermove){alert(`You: ${usermove} \nComputer: ${computermove} \nit's a tie.`); userscore++; computerscore++;}
                 }
 
-                if (userscore>computerscore){console.log("YAY! You won the Game.")}
-                else if (computerscore>userscore){console.log("You lost. Better luck next time.")}
-                else if (computerscore===userscore){console.log("The Game is a tie.Shall we play again?")}
-
-                console.log("Your Score: "+ userscore);
-                console.log("computer Score: "+ computerscore);
+                if (userscore>computerscore){alert(`YAY! You won the Game. \nYour Score: ${userscore} \nComputer Score: ${computerscore}`)}
+                else if (computerscore>userscore){alert(`You lost. Better luck next time.\nYour Score: ${userscore} \nComputer Score: ${computerscore}`)}
+                else if (computerscore===userscore){alert(`The Game is computermovea tie.Shall we play again? \nYour Score: ${userscore} \nComputer Score: ${computerscore}`)}
             }    
