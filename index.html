@@ -6,8 +6,18 @@
         <title>Rock Paper Scissors</title>
     </head>
     <body>
-        <h1>Rock Paper Scissors go</h1>
-        <p>* refresh the page if u wanna play again</p>
+        <h1 style="text-align:center;">Rock Paper Scissors go</h1>
+        <div class="buttons" style="text-align:center;">
+        <button id="rock" style="padding:10px;margin:15px;">Rock</button><button id="paper" style="padding:10px;margin:15px;">Paper</button><button id="scissors" style="padding:10px;margin:15px;">Scissors</button>
+        </div>
+        <div style="text-align:center;background-color:grey;">
+            <p id="moves"></p>
+        </div>
+        <div style="text-align:center;">
+            <p id="scores"></p>
+        </div>
+        <p id="winner" style="text-align:center;background-color:grey;"></p>
+        <p style="text-align:center;">* refresh the page to play again</p>
         <script src="rockpaperscissors.js">
         </script>
     </body>
