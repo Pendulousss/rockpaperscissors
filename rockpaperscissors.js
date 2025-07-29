@@ -1,3 +1,9 @@
+            let refresh = document.querySelector("div>#refresh");
+            refresh.addEventListener("click",()=>{
+                location.reload();
+            });
+            
+            
             let userscore = 0;
             let computerscore = 0;
             
@@ -31,7 +37,7 @@
                         userscore++;
                         moves.textContent = `you: ${usermove} \ncomputer: ${computermove} \nYou win. Paper wraps Rock `;
                         scores.textContent = `your score: ${userscore} || computer score: ${computerscore}`
-                        
+
                     } else if (usermove === `scissors` && computermove ===`paper`){
                         userscore++;
                         moves.textContent=`you: ${usermove} \ncomputer: ${computermove} \nYou win. Scissors cut Paper `;
