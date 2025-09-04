@@ -9,23 +9,34 @@
         <title>Rock Paper Scissors</title>
     </head>
     <body>
-        <h1>Rock Paper Scissors go</h1>
-
-        <div class="buttons">
-        <button id="rock">Rock</button><button id="paper">Paper</button><button id="scissors">Scissors</button>
+          <div class="comptrack">
+            <div class="compcards">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="complife">
+              <h3>Computer</h3>
+              <p></p>
+            </div>
         </div>
+          <div class="gametrack">
+            <div class="gametable">
+              <div class="usermove"></div>
+              <div class="compmove"></div>
+            </div>
+          </div>
+          <div class="usertrack">
+            <div class="userlife">
+              <h3>Player</h3>
+              <p></p>
+            </div>
+            <div class="usercards">
+              <div class="rock"><img src="images/rock.svg" alt="rock"></div>
+              <div class="paper"><img src="images/paper.svg" alt="paper"></div>
+              <div class="scissors"><img src="images/scissors.svg" alt="scissors"></div>
+            </div>
+          </div>
 
-        <div class="container">
-            <p id="moves"></p>
-        </div>
-
-        <div class="container">
-            <p id="scores"></p>
-        </div>
-
-        <div>
-            <button id="refresh">play again</button>
-        </div>
-        
     </body>
 </html>
