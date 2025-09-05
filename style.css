@@ -73,6 +73,8 @@ body {
          width: 150px;
          background-color: beige;
          border-radius: 10%;
+         filter: invert(1);
+         transform: scaleX(-1);
        }
        &:hover {
        transform: scale(1.1) rotate(4deg);
@@ -127,16 +129,27 @@ body {
     border-radius: 4%;
     border: 16px solid yellow;
     display: flex;
-    .compmove {
-        img {
-        transform: scaleX(-1);
-        filter: invert(1);
-        }
-    }
-    .usermove {
-        img {
-        filter: invert(1);
-        }
-    }
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 
+.userchoice, .compchoice {
+    height: 100%;
+    width: 100%;
+}
+
+.userchoice img, .compchoice img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    filter: invert(1) drop-shadow(0 0 3px rgb(90, 66, 24));
+}
+
+.userchoice img {
+    transform: scaleX(-1);
+}
+
+/* .compchoice img {
+    transform: scaleY(-1);
+} */
