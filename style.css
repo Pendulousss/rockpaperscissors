@@ -73,7 +73,7 @@ body {
          width: 150px;
          background-color: beige;
          border-radius: 10%;
-         filter: invert(1);
+         /* filter: invert(1); */
          transform: scaleX(-1);
        }
        &:hover {
@@ -129,9 +129,8 @@ body {
     border-radius: 4%;
     border: 16px solid yellow;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 
 .userchoice, .compchoice {
@@ -146,6 +145,19 @@ body {
     filter: invert(1) drop-shadow(0 0 3px rgb(90, 66, 24));
 }
 
+/* SVG Color Styling */
+/* img[src$=".svg"] {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(235deg) brightness(104%) contrast(97%);
+} */
+
+.gametable img[src$=".svg"] {
+    filter: invert(1) drop-shadow(0 0 3px rgb(90, 66, 24));
+}
+
+.hearts img[src$=".svg"] {
+    filter: invert(27%) sepia(91%) saturate(7451%) hue-rotate(353deg) brightness(106%) contrast(126%);
+}
+
 .userchoice img {
     transform: scaleX(-1);
 }
@@ -153,3 +165,4 @@ body {
 /* .compchoice img {
     transform: scaleY(-1);
 } */
+
