@@ -54,17 +54,17 @@ function getUserChoice() {
 
 function playRound() {
     if (userChoice === compChoice) {
-        alert("It's a tie!");
+        // alert("It's a tie!");
     } else if (
         (userChoice === 'rock' && compChoice === 'scissors') ||
         (userChoice === 'paper' && compChoice === 'rock') ||
         (userChoice === 'scissors' && compChoice === 'paper')
     ) {
-        alert("You win this round!");
+        // alert("You win this round!");
         let compLives = compChances.querySelectorAll('img').length - 1;
         updateHearts('comp', compLives);
     } else {
-        alert("Computer wins this round!");
+        // alert("Computer wins this round!");
         let userLives = userChances.querySelectorAll('img').length - 1;
         updateHearts('user', userLives);
     }
