@@ -37,7 +37,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    div {
+    
+}
+
+.compcards div {
         background-color: var(--secondary-color);
         padding: 16px;
         border: 8px solid var(--primary-color);
@@ -45,7 +48,6 @@ body {
         height: 200px;
         width: 150px;
     }
-}
 
 .usertrack {
     grid-row: 3 / 4;
